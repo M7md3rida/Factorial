@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txt: UITextField!
+    @IBOutlet weak var lb: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func btn(_ sender: Any) {
+        let x = Int (txt.text!)!
+        var fact = 1
+        for i in 1...x {
+            fact = fact * i
+        }
+        lb.text = String (fact)
+        
+    }
 
 }
 
